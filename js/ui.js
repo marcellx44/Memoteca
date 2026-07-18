@@ -8,6 +8,13 @@ export const preencherFormulario = async (pensamentoId) => {
     document.getElementById("pensamento-autoria").value = pensamento.autoria
 }
 
+
+// função para excluir pensamento
+export const excluirPensamento = async (pensamento) => {
+    await api.excluirPensamento(pensamento)
+    renderizarPensamentos()
+}
+
 // função para adicionar pensamento na lista 
 
 export const adicionarPensamentoNaLista = (pensamento) => {
@@ -41,7 +48,7 @@ export const adicionarPensamentoNaLista = (pensamento) => {
     
     const botaoExcluir = document.createElement("button")
     botaoExcluir.classList.add("botao-excluir")
-    botaoExcluir.addEventListener("click", ()=> {preencherFormulario(pensamento.id)})
+    botaoExcluir.addEventListener("click", ()=> {excluirPensamento(pensamento)})
 
     const iconeExcluir = document.createElement("img")
     iconeExcluir.src = "assets/imagens/icone-excluir.png"
