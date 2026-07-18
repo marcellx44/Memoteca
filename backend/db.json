@@ -89,6 +89,16 @@
       "conteudo": "          O essencial é invisível aos olhos, e só se vê bem com o coração.",
       "autoria": "O Pequeno Príncipe",
       "id": "6ucNA1fsOwE"
+    },
+    {
+      "conteudo": "          O essencial é invisível aos olhos, e só se vê bem com o coração.",
+      "autoria": "Pequeno Príncipe - O livro",
+      "id": "h-QaCjoHNlo"
+    },
+    {
+      "id": "RcT8Inxe2Ec",
+      "conteudo": "Se eu for aí e achar, eu esfrego na sua cara! grr",
+      "autoria": "Mãe"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

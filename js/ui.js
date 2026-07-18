@@ -1,5 +1,13 @@
 import { api } from "./api.js"
 
+export const preencherFormulario = async (pensamentoId) => {
+    const pensamento = await api.buscarPensamentoPorId(pensamentoId)
+
+    document.getElementById("pensamento-id").value = pensamento.id
+    document.getElementById("pensamento-conteudo").value= pensamento.conteudo
+    document.getElementById("pensamento-autoria").value = pensamento.autoria
+}
+
 // função para adicionar pensamento na lista 
 
 export const adicionarPensamentoNaLista = (pensamento) => {
@@ -21,9 +29,24 @@ export const adicionarPensamentoNaLista = (pensamento) => {
     pensamentoAutoria.textContent = pensamento.autoria
     pensamentoAutoria.classList.add("pensamento-autoria")
 
+    const botaoEditar = document.createElement("button")
+    botaoEditar.classList.add("botao-editar")
+    botaoEditar.addEventListener("click", ()=> {preencherFormulario(pensamento.id)})
+
+    const iconeEditar = document.createElement("img")
+    iconeEditar.src = "assets/imagens/icone-editar.png"
+    iconeEditar.alt = "Ícone editar"
+
+    botaoEditar.appendChild(iconeEditar)
+
+    const icones = document.createElement("div")
+    icones.classList.add("icones")
+    icones.appendChild(botaoEditar)
+
     li.appendChild(iconeAspas)
     li.appendChild(pensamentoConteudo)
     li.appendChild(pensamentoAutoria)
+    li.appendChild(icones)
 
     listaPensamentos.appendChild(li)
 }
