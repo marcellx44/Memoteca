@@ -38,10 +38,21 @@ export const adicionarPensamentoNaLista = (pensamento) => {
     iconeEditar.alt = "Ícone editar"
 
     botaoEditar.appendChild(iconeEditar)
+    
+    const botaoExcluir = document.createElement("button")
+    botaoExcluir.classList.add("botao-excluir")
+    botaoExcluir.addEventListener("click", ()=> {preencherFormulario(pensamento.id)})
+
+    const iconeExcluir = document.createElement("img")
+    iconeExcluir.src = "assets/imagens/icone-excluir.png"
+    iconeExcluir.alt = "Ícone Excluir"
+
+    botaoExcluir.appendChild(iconeExcluir)
 
     const icones = document.createElement("div")
     icones.classList.add("icones")
     icones.appendChild(botaoEditar)
+    icones.appendChild(botaoExcluir)
 
     li.appendChild(iconeAspas)
     li.appendChild(pensamentoConteudo)
