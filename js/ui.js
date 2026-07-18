@@ -34,7 +34,8 @@ export const renderizarPensamentos = async () => {
     const listaPensamentos = document.getElementById('lista-pensamentos')
     try {
         const pensamentos = await api.buscarPensamentos()
-        pensamentos.forEach(adicionarPensamentoNaLista())
+        listaPensamentos.innerHTML = ''
+        pensamentos.forEach(adicionarPensamentoNaLista)
     } catch {
         alert('Erro ao renderizar pensamento')
     }
