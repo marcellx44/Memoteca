@@ -51,49 +51,14 @@
       "autoria": "Grupo da família"
     },
     {
-      "id": "8b4c",
-      "conteudo": "A vingança nunca é plena... mata a alma e a envenena...",
-      "autoria": "Seu Madruga"
-    },
-    {
       "id": "4d2e",
       "conteudo": "Se eu for aí e achar, eu esfrego na sua cara!",
       "autoria": "Mãe"
     },
     {
-      "conteudo": "          Oi posso fala",
-      "autoria": "eu",
-      "id": "zZXqBhX5i8Y"
-    },
-    {
-      "conteudo": "          Oi posso fala",
-      "autoria": "Figurinha ",
-      "id": "MTuBzSjw-CI"
-    },
-    {
-      "conteudo": "          Oi posso fala",
-      "autoria": "Figurinha ",
-      "id": "DkIkblcf6u4"
-    },
-    {
-      "conteudo": "Novo pensamento de teste",
-      "autoria": "eu ",
-      "id": "7gyjtlGIXgk"
-    },
-    {
       "conteudo": "          O essencial é invisível aos olhos, e só se vê bem com o coração.",
       "autoria": "O Pequeno Príncipe",
       "id": "6ucNA1fsOwE"
-    },
-    {
-      "conteudo": "          O essencial é invisível aos olhos, e só se vê bem com o coração.",
-      "autoria": "Pequeno Príncipe - O livro",
-      "id": "h-QaCjoHNlo"
-    },
-    {
-      "id": "RcT8Inxe2Ec",
-      "conteudo": "Se eu for aí e achar, eu esfrego na sua cara! grr",
-      "autoria": "Mãe"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

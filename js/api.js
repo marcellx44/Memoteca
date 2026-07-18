@@ -1,10 +1,12 @@
 // arquivo que faz as requisições API 
 
+const URL_BASE = "http://localhost:3000"
+
 export const api ={
     //função de buscar pensamentos 
     async buscarPensamentos(){
         try{
-            const resposta = await fetch('http://localhost:3000/pensamentos')
+            const resposta = await fetch(`${URL_BASE}/pensamentos`)
             const pensamentos = await resposta.json()
             return pensamentos;
         } catch {
@@ -14,7 +16,7 @@ export const api ={
     //função de salvar pensamentos 
     async salvarPensamentos(pensamento){
         try{
-            const resposta = await fetch('http://localhost:3000/pensamentos', {
+            const resposta = await fetch(`${URL_BASE}/pensamentos`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -30,7 +32,7 @@ export const api ={
     //função de buscar pensamento pelo id
     async buscarPensamentoPorId(id){
         try{
-            const resposta = await fetch(`http://localhost:3000/pensamentos/${id}`) 
+            const resposta = await fetch(`${URL_BASE}/pensamentos/${id}`) 
             const pensamento = await resposta.json()
             return pensamento;
         } catch {
@@ -41,7 +43,7 @@ export const api ={
      //função de editar pensamentos 
     async editarPensamento(pensamento){
         try{
-            const resposta = await fetch(`http://localhost:3000/pensamentos/${pensamento.id}`, {
+            const resposta = await fetch(`${URL_BASE}/pensamentos/${pensamento.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -56,7 +58,7 @@ export const api ={
     // função de excluir pensamento 
     async excluirPensamento (pensamento) {
         try{
-            const resposta = await fetch(`http://localhost:3000/pensamentos/${pensamento.id}`, {
+            const resposta = await fetch(`${URL_BASE}/pensamentos/${pensamento.id}`, {
                 method: "DELETE",
             })
             return await resposta.json()
