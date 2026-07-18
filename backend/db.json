@@ -84,6 +84,11 @@
       "conteudo": "Novo pensamento de teste",
       "autoria": "eu ",
       "id": "7gyjtlGIXgk"
+    },
+    {
+      "conteudo": "          O essencial é invisível aos olhos, e só se vê bem com o coração.",
+      "autoria": "O Pequeno Príncipe",
+      "id": "6ucNA1fsOwE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
