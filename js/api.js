@@ -23,7 +23,7 @@ export const api ={
             })
             return await resposta.json()
         } catch {
-            alert('Erro ao buscar pensamentos')
+            alert('Erro ao salvar pensamentos')
         }
     }
 }

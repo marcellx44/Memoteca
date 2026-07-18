@@ -1,4 +1,4 @@
-import { renderizarPensamentos } from "./ui.js"
+import { cancelarPensamento, renderizarPensamentos } from "./ui.js"
 import {api} from "./api.js"
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const formularioPensamento = document.getElementById("pensamento-form")
     formularioPensamento.addEventListener("submit", manipularSubmissaoFormulario)
 })
+
+// Cancelar conteúdo 
+
+document.getElementById("botao-cancelar").addEventListener("click", cancelarPensamento)
 
 async function manipularSubmissaoFormulario(event) {
     event.preventDefault()

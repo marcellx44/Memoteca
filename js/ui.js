@@ -40,3 +40,10 @@ export const renderizarPensamentos = async () => {
         alert('Erro ao renderizar pensamento')
     }
 }
+
+// função para cancelar pensamento 
+
+export const cancelarPensamento = () => {
+    document.getElementById("pensamento-conteudo").value = '';
+    document.getElementById("pensamento-autoria").value = '';
+}
